@@ -1,0 +1,202 @@
+[
+	{
+		"title": "Noodled Sweet Potato",
+		"price": 7.25,
+		"image": "http://placehold.it/200x200",
+		"availableRange": {
+			"start": 1017,
+			"end": 1031,
+			"exclude": []
+		},
+		"keys": ["noodled", "potato"]
+	},		
+	{
+		"title": "Diced Sweet Potato",
+		"price": 7.25,
+		"image": "http://placehold.it/200x200",
+		"availableRange": {
+			"start": 1017,
+			"end": 1031,
+			"exclude": []
+		},
+		"keys": ["diced", "potato"]
+	},		
+	{
+		"title": "Diced Butternut Squash",
+		"price": 7.25,
+		"image": "http://placehold.it/200x200",
+		"availableRange": {
+			"start": 1017,
+			"end": 1031,
+			"exclude": []
+		},
+		"keys": ["diced", "squash"]
+	},	
+	{
+		"title": "Noodled Butternut Squash",
+		"price": 7.25,
+		"image": "http://placehold.it/200x200",
+		"availableRange": {
+			"start": 1017,
+			"end": 1031,
+			"exclude": []
+		},
+		"keys": ["noodled", "squash"]
+	},		
+	{
+		"title": "Riced Cauliflower",
+		"price": 7.25,
+		"image": "http://placehold.it/200x200",
+		"availableRange": {
+			"start": 1017,
+			"end": 1031,
+			"exclude": []
+		},
+		"keys": ["riced", "cauliflower"]
+	},		
+	{
+		"title": "De-stemmed Cauliflower (in florets)",
+		"price": 7.25,
+		"image": "http://placehold.it/200x200",
+		"availableRange": {
+			"start": 1017,
+			"end": 1031,
+			"exclude": []
+		},
+		"keys": ["destemmed", "cauliflower", "floret"]
+	},	
+	{
+		"title": "Ribboned Kale",
+		"price": 7.25,
+		"image": "http://placehold.it/200x200",
+		"availableRange": {
+			"start": 1017,
+			"end": 1031,
+			"exclude": []
+		},
+		"keys": ["ribboned", "kale"]
+	},	
+	{
+		"title": "De-Stemmed Kale",
+		"price": 7.25,
+		"image": "http://placehold.it/200x200",
+		"availableRange": {
+			"start": 1017,
+			"end": 1031,
+			"exclude": []
+		},
+		"keys": ["destemmed", "kale"]
+	},	
+	{
+		"title": "Ribooned Rainbow Chard",
+		"price": 7.25,
+		"image": "http://placehold.it/200x200",
+		"availableRange": {
+			"start": 1017,
+			"end": 1031,
+			"exclude": []
+		},
+		"keys": ["ribboned", "chard"]
+	},	
+	{
+		"title": "Diced Rainbow Chard",
+		"price": 7.25,
+		"image": "http://placehold.it/200x200",
+		"availableRange": {
+			"start": 1017,
+			"end": 1031,
+			"exclude": []
+		},
+		"keys": ["diced", "chard"]
+	},	
+	{
+		"title": "Shaved Brussels Sprout",
+		"price": 7.25,
+		"image": "http://placehold.it/200x200",
+		"availableRange": {
+			"start": 1017,
+			"end": 1031,
+			"exclude": []
+		},
+		"keys": ["shaved", "brussels sprouts"]
+	},	
+	{
+		"title": "Shaved Fennel",
+		"price": 7.25,
+		"image": "http://placehold.it/200x200",
+		"availableRange": {
+			"start": 1017,
+			"end": 1031,
+			"exclude": []
+		},
+		"keys": ["shaved", "fennel"]
+	},	
+	{
+		"title": "Julienned Carrots",
+		"price": 7.25,
+		"image": "http://placehold.it/200x200",
+		"availableRange": {
+			"start": 1017,
+			"end": 1031,
+			"exclude": []
+		},
+		"keys": ["julienned", "carrot"]
+	},	
+	{
+		"title": "Julienned Zucchini",
+		"price": 7.25,
+		"image": "http://placehold.it/200x200",
+		"availableRange": {
+			"start": 1017,
+			"end": 1031,
+			"exclude": []
+		},
+		"keys": ["julienned", "zucchini"]
+	},	
+	{
+		"title": "French-cut Green Beans",
+		"price": 7.25,
+		"image": "http://placehold.it/200x200",
+		"availableRange": {
+			"start": 1017,
+			"end": 1031,
+			"exclude": []
+		},
+		"keys": ["french cut", "green beans"]
+	},	
+	{
+		"title": "Diced Turnip",
+		"price": 7.25,
+		"image": "http://placehold.it/200x200",
+		"availableRange": {
+			"start": 1017,
+			"end": 1031,
+			"exclude": []
+		},
+		"keys": ["diced", "turnip"]
+	},	
+	{
+		"title": "Julienned Turnip",
+		"price": 7.25,
+		"image": "http://placehold.it/200x200",
+		"availableRange": {
+			"start": 1017,
+			"end": 1031,
+			"exclude": []
+		},
+		"keys": ["julienned", "turnip"]
+	},	
+	{
+		"title": "Rose-cut Radish",
+		"price": 7.25,
+		"image": "http://placehold.it/200x200",
+		"availableRange": {
+			"start": 1017,
+			"end": 1031,
+			"exclude": []
+		},
+		"keys": ["rose-cut", "radish"]
+	},
+
+
+]

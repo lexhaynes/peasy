@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Peasy Prototype</title>
+
+	<!--PICK A FONT-->
+
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,600,700" rel="stylesheet">
+
+	<!-- END PICK FONT -->
+
+	<link rel="stylesheet" href="lib/font-awesome-4.6.3/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/mobile.css">
+</head>
+<body>
+	
+
+	<div class="app">
+		<!--main app area-->
+		<main class="app-main">
+
+			<!-- Global Header -->
+			<header class="global-header">
+				<div class="grid-full mod-flex mod-space-between">
+					<a href = "#" class="global-header-logo">
+						PEASY
+						<i class="global-header-logo-icon fa fa-leaf"></i>
+					</a>
+					<div class="global-header-cart">
+						<button class="global-button global-header-cart-button">
+							<i class="fa fa-shopping-cart"></i>
+							&nbsp; Your Cart
+							<span class="global-header-cart-summary">
+								(2)
+							</span>
+						</button>
+					</div>
+				</div>
+			</header>
+			<!-- end Global Header -->
+
+			<!-- Error Bar (hidden by default) -->
+			<div class="error-bar">
+				<div class="grid-full">
+					<div class="error-bar-content">
+						This is an error.
+					</div>
+					<button class="global-button error-bar-close">[close]</button>
+				</div>
+			</div>
+
+			<!--Products View-->
+			<main class="view-products is-visible">
+
+				<!-- Index Toolbar -->
+				<header class="toolbar">
+					<div class="grid-full mod-flex mod-space-between">
+							<div class="toolbar-item is-selected">Today, Oct 13</div>
+							<div class="toolbar-item">Tomorrow, Oct 14</div>
+							<div class="toolbar-item">Sunday, Oct 16</div>
+							<div class="toolbar-item">Monday, Oct 17</div>
+							<button class = "global-button toolbar-dateselect is-selected">More Dates</button>
+							<button class = "global-button toolbar-filter">Filter Items</button>
+					</div>
+				</header>
+				<!-- end Index Toolbar -->
+
+				<!-- Date Select Dropdown -->
+				<div class="dateselect">
+					<div class="grid-full mod-flex-column">
+						
+						<div class="dateselect-header">Select a Date</div>
+							
+							<div class="dateselect-items">
+								<div class="dateselect-item">
+									<div class="dateselect-item-day">Tue</div>
+									<div class="dateselect-item-date">18</div>
+								</div>						
+								<div class="dateselect-item">
+									<div class="dateselect-item-day">Wed</div>
+									<div class="dateselect-item-date">19</div>
+								</div>						
+								<div class="dateselect-item">
+									<div class="dateselect-item-day">Thu</div>
+									<div class="dateselect-item-date">20</div>
+								</div>						
+								<div class="dateselect-item">
+									<div class="dateselect-item-day">Fri</div>
+									<div class="dateselect-item-date">21</div>
+								</div>
+								<div class="dateselect-item">
+									<div class="dateselect-item-day">Sat</div>
+									<div class="dateselect-item-date">22</div>
+								</div>						
+								<div class="dateselect-item">
+									<div class="dateselect-item-day">Sun</div>
+									<div class="dateselect-item-date">23</div>
+								</div>						
+								<div class="dateselect-item">
+									<div class="dateselect-item-day">Mon</div>
+									<div class="dateselect-item-date">24</div>
+								</div>						
+								<div class="dateselect-item">
+									<div class="dateselect-item-day">Tue</div>
+									<div class="dateselect-item-date">25</div>
+								</div>
+							</div>
+					</div>
+				</div>
+				<!-- end Date Select Dropdown -->
+
+				<!-- Product List -->
+				<main class="product-list">
+					<!-- Product List Row-->
+					<div class="product-list-row">
+						<div class="grid-full mod-flex mod-space-between">
+							<div class="product-list-item">
+								<div class="product-list-item-image"></div>
+								<div class="product-list-item-title">Noodled Squash</div>
+								<div class="product-list-item-options">
+									<div class="product-list-item-price">$7.95</div>
+									<div class="product-list-item-options-buttons">
+										<button class="global-button product-list-item-button mod-remove">-</button><button class="global-button product-list-item-button mod-add">+</button>
+									</div>
+								</div>
+							</div>					
+							<div class="product-list-item">
+								<div class="product-list-item-image"></div>
+								<div class="product-list-item-title">Riced Cauliflower</div>
+								<div class="product-list-item-options">
+									<div class="product-list-item-price">$7.95</div>
+									<div class="product-list-item-options-buttons">
+										<button class="global-button product-list-item-button mod-remove is-visible">-</button><button class="global-button product-list-item-button mod-add">+</button>
+									</div>
+								</div>
+							</div>						
+							<div class="product-list-item">
+								<div class="product-list-item-image"></div>
+								<div class="product-list-item-title">Noodled Sweet Potato</div>
+								<div class="product-list-item-options">
+									<div class="product-list-item-price">$6.95</div>
+									<div class="product-list-item-options-buttons">
+										<button class="global-button product-list-item-button mod-remove">-</button><button class="global-button product-list-item-button mod-add">+</button>
+									</div>
+								</div>
+							</div>					
+							<div class="product-list-item">
+								<div class="product-list-item-image"></div>
+								<div class="product-list-item-title">Diced Rutabaga</div>
+								<div class="product-list-item-options">
+									<div class="product-list-item-price">$6.95</div>
+									<div class="product-list-item-options-buttons">
+										<button class="global-button product-list-item-button mod-remove">-</button><button class="global-button product-list-item-button mod-add">+</button>
+									</div>
+								</div>
+							</div>	
+						</div><!--end grid full-->
+					</div><!--end product list row-->
+					
+					<!-- Product List Row-->
+					<div class="product-list-row">
+						<div class="grid-full mod-flex mod-space-between">
+							<div class="product-list-item">
+								<div class="product-list-item-image"></div>
+								<div class="product-list-item-title">Noodled Squash</div>
+								<div class="product-list-item-options">
+									<div class="product-list-item-price">$7.95</div>
+									<div class="product-list-item-options-buttons">
+										<button class="global-button product-list-item-button mod-remove">-</button><button class="global-button product-list-item-button mod-add">+</button>
+									</div>
+								</div>
+							</div>					
+							<div class="product-list-item">
+								<div class="product-list-item-image"></div>
+								<div class="product-list-item-title">Riced Cauliflower</div>
+								<div class="product-list-item-options">
+									<div class="product-list-item-price">$7.95</div>
+									<div class="product-list-item-options-buttons">
+										<button class="global-button product-list-item-button mod-remove is-visible">-</button><button class="global-button product-list-item-button mod-add">+</button>
+									</div>
+								</div>
+							</div>						
+							<div class="product-list-item">
+								<div class="product-list-item-image"></div>
+								<div class="product-list-item-title">Noodled Sweet Potato</div>
+								<div class="product-list-item-options">
+									<div class="product-list-item-price">$6.95</div>
+									<div class="product-list-item-options-buttons">
+										<button class="global-button product-list-item-button mod-remove">-</button><button class="global-button product-list-item-button mod-add">+</button>
+									</div>
+								</div>
+							</div>					
+							<div class="product-list-item">
+								<div class="product-list-item-image"></div>
+								<div class="product-list-item-title">Diced Rutabaga</div>
+								<div class="product-list-item-options">
+									<div class="product-list-item-price">$6.95</div>
+									<div class="product-list-item-options-buttons">
+										<button class="global-button product-list-item-button mod-remove">-</button><button class="global-button product-list-item-button mod-add">+</button>
+									</div>
+								</div>
+							</div>	
+						</div><!--end grid full-->
+					</div><!--end product list row-->
+
+					<!-- Product List Row-->
+					<div class="product-list-row">
+						<div class="grid-full mod-flex mod-space-between">
+							<div class="product-list-item">
+								<div class="product-list-item-image"></div>
+								<div class="product-list-item-title">Noodled Squash</div>
+								<div class="product-list-item-options">
+									<div class="product-list-item-price">$7.95</div>
+									<div class="product-list-item-options-buttons">
+										<button class="global-button product-list-item-button mod-remove">-</button><button class="global-button product-list-item-button mod-add">+</button>
+									</div>
+								</div>
+							</div>					
+							<div class="product-list-item">
+								<div class="product-list-item-image"></div>
+								<div class="product-list-item-title">Riced Cauliflower</div>
+								<div class="product-list-item-options">
+									<div class="product-list-item-price">$7.95</div>
+									<div class="product-list-item-options-buttons">
+										<button class="global-button product-list-item-button mod-remove is-visible">-</button><button class="global-button product-list-item-button mod-add">+</button>
+									</div>
+								</div>
+							</div>						
+							<div class="product-list-item">
+								<div class="product-list-item-image"></div>
+								<div class="product-list-item-title">Noodled Sweet Potato</div>
+								<div class="product-list-item-options">
+									<div class="product-list-item-price">$6.95</div>
+									<div class="product-list-item-options-buttons">
+										<button class="global-button product-list-item-button mod-remove">-</button><button class="global-button product-list-item-button mod-add">+</button>
+									</div>
+								</div>
+							</div>					
+							<div class="product-list-item">
+								<div class="product-list-item-image"></div>
+								<div class="product-list-item-title">Diced Rutabaga</div>
+								<div class="product-list-item-options">
+									<div class="product-list-item-price">$6.95</div>
+									<div class="product-list-item-options-buttons">
+										<button class="global-button product-list-item-button mod-remove">-</button><button class="global-button product-list-item-button mod-add">+</button>
+									</div>
+								</div>
+							</div>	
+						</div><!--end grid full-->
+					</div><!--end product list row-->
+				</main>
+				<!-- end Product List -->	
+			</main>
+			<!--end Products View-->
+
+			<!-- Checkout View (hidden by default) -->
+			<main class="view-checkout is-visible">
+
+				<!-- Checkout Progress Bar (hidden by default) -->
+				<header class="checkout-progress-bar">
+					<a href = "#step1" class="global-link checkout-progress-bar-step is-complete">
+						Step 1 of 4 In Progress
+					</a>
+					<a href = "#step2" class="global-link checkout-progress-bar-step">
+						Step 2 of 4
+					</a>
+					<a href = "#step3" class="global-link checkout-progress-bar-step">
+						Step 3 of 4
+					</a>			
+					<a href = "#step4" class="global-link checkout-progress-bar-step">
+						Step 4 of 4
+					</a>			
+					<a href = "#step5" class="global-link checkout-progress-bar-step">
+						Order Complete
+					</a>
+				</header>
+				<!-- end Checkout Progress Bar -->
+
+				<div class="grid-full">
+					<a class="global-link" href = "#"><i class="fa fa-caret-left"></i> Continue Shopping</a>
+
+					<!--Step 1: Review -->
+						
+					<section class="checkout-section">
+						<div class="checkout-header">
+							1. Review Your Order
+						</div>
+
+						<div class="checkout-subheader">Today, October 10</div>
+
+						<p><em>Select your delivery range:</em></p>
+						<div class="checkout-delivery-select">
+							<div class="checkout-delivery-select-item">
+								10 - 12pm
+							</div>	
+							<div class="checkout-delivery-select-item">
+								12 - 2pm
+							</div>
+							<div class="checkout-delivery-select-item">
+								2 - 4pm
+							</div>
+							<div class="checkout-delivery-select-item is-selected">
+								5 - 7pm
+							</div>					
+							<div class="checkout-delivery-select-item">
+								7 - 9pm
+							</div>
+						</div>
+						
+						<div class="product-summary">
+							<div class="util-float-left">
+								<div class="product-summary-image"></div>
+								<div class="util-float-right">
+									<div class="product-summary-title">Ribboned Kale</div>
+									<div class="product-summary-price">$6.00</div>
+								</div>
+								
+							</div>
+							
+							<div class="util-float-right product-summary-quantity">
+								<label for="product-summary-quantity-select">Quantity</label>
+								<select class="form-field-input mod-select mod-quantity-select">
+									<option value="1">1</option>
+									<option value="2">2</option>
+								</select>
+								<button class="global-button product-summary-quantity-remove">remove</button>
+							</div>
+							<div class="util-clear"></div>
+						</div>
+
+
+
+					</section>
+
+
+					<!--Step 2: Delivery Address -->
+
+					<section class="checkout-section">
+						<div class="checkout-header">
+							2. Add Your Delivery Address
+						</div>
+
+						<button class="global-button mod-link">Add New Delivery Address</button>
+						
+						<div class="form-fields">
+							<div class="form-field grid-75">
+								<label for="address">Address</label>
+								<input type="text" class = "form-field-input mod-text" name="address" placeholder="Enter your address" />
+							</div>
+
+							<div class="form-field grid-25">
+								<label for="unit">Apt/Fl</label>
+								<input type="text" class = "form-field-input mod-text" name="unit" placeholder="Apt/Fl" />
+							</div>
+
+							<div class="form-field grid-50">
+								<label for="city">City</label>
+								<input type="text" class = "form-field-input mod-text" name="city" placeholder="Enter your city" />
+							</div>
+
+							<div class="form-field grid-25">
+								<label for="state">State</label>
+								<select class = "form-field-input mod-select" name="state"> 
+									<option value="State" disabled selected>State</option>
+									<option value="CA">CA</option>
+								</select>
+							</div>
+							
+							<div class="form-field grid-25">
+								<label for="zip">ZIP Code</label>
+								<input type="number" class = "form-field-input mod-number" name="zip" placeholder="ZIP Code" />
+							</div>
+							<br>
+							<div class="form-field grid-50">
+								<label for="phone-number">Phone Number</label>
+								<input type="number" class = "form-field-input mod-number" name="phone-number" placeholder="Phone number" />
+							</div>
+							<br>
+							<div class="form-field grid-50">
+								<label for="delivery-notes">Delivery Instructions</label>
+								<textarea class = "form-field-input mod-textarea" name="delivery-notes" placeholder="E.g. Please ring top doorbell"></textarea>
+							</div>
+							<br>
+							<div class="form-field">
+								<button class="global-button form-button mod-cancel">Cancel</button>
+								<button class="global-button mod-primary form-button mod-save">Save</button>
+							</div>
+						</div><!--end form fields-->
+
+					</section>
+
+					<!--Step 3: Payment Method -->
+
+					<section class="checkout-section">
+						<div class="checkout-header">
+							3. Add Your Payment Method
+						</div>
+
+						<a class="global-link" href = "#">Continue with Paypal</a>
+						
+						<div class = "divider">OR</div>
+						
+						<button class="global-button mod-link">Add New Payment Method</button>
+
+						<div class="form-fields">
+
+							<div class="form-field grid-50">
+								<label for="cc-number">Credit Card Number</label>
+								<input type="number" class = "form-field-input mod-number" name="cc-number" placeholder="Credit Card Number" />
+							</div>
+
+							<div class="form-field grid-10">
+								<label for="expiry-mm">MM</label>
+
+								<input type="number" class = "form-field-input mod-number" name="expiry-mm" placeholder="MM" />	
+
+							</div>					
+
+							<div class="form-field grid-10">
+								<label for="expiry-yy">YY</label>
+
+								<input type="number" class = "form-field-input mod-number" name="expiry-yy" placeholder="YY" />
+							</div>
+
+
+							<div class="form-field grid-10">
+								<label for="cvv">CVV</label>
+								<input type="number" class = "form-field-input mod-number" name="cvv" placeholder="CVV" />
+							</div>
+
+							<div class="form-field grid-20">
+								<label for="billing-zip">Billing ZIP</label>
+								<input type="number" class = "form-field-input mod-number" name="billing-zip" placeholder="Billing ZIP Code" />
+							</div>
+							<br>
+							<div class="form-field">
+								<button class="global-button form-button mod-cancel">Cancel</button>
+								<button class="global-button mod-primary form-button mod-save">Save</button>
+							</div>
+						</div><!--end form fields-->
+					
+					</section>
+
+					<!--Step 4: Place Order -->
+
+					<section class="checkout-section">
+						<div class="checkout-header">
+							4. Place Your Order
+						</div>
+
+						<h3>Order Summary</h3>
+
+						<table class = "checkout-order-summary">
+							<tr class = "checkout-order-summary-row">
+								<th class = "checkout-order-summary-data-header">Items</th>
+								<td class = "checkout-order-summary-data">$21.00</td>
+							</tr>				
+							<tr class = "checkout-order-summary-row">
+								<th class = "checkout-order-summary-data-header">Delivery Fee</th>
+								<td class = "checkout-order-summary-data">$4.00</td>
+							</tr>				
+							<tr class = "checkout-order-summary-row">
+								<th class = "checkout-order-summary-data-header">Tax</th>
+								<td class = "checkout-order-summary-data">$1.00</td>
+							</tr>				
+							<tr class = "checkout-order-summary-row">
+								<th class = "checkout-order-summary-data-header">Gratuity</th>
+								<td class = "checkout-order-summary-data">
+									<label for="gratuity">$</label>
+									<select class = "form-field-select" name="state"> 
+										<option value="2" selected>2.00</option>
+										<option value="3">3.00</option>
+									</select>
+								</td>
+							</tr>
+
+						</table>
+
+						<div class="cart-total">
+							<div class="cart-total-summary">
+								<div class="cart-total-summary-title">Total</div>
+								<div class="cart-total-summary-price">$29.75</div>
+							</div>	
+							<button class="global-button mod-primary cart-total-checkout">Place Your Order</button>
+						</div>
+					</section>
+				</div><!--end grid full-->
+			</main>
+			<!--end Checkout View-->
+
+			<!--Order Complete View (hidden by default)-->
+			<main class="view-complete is-visible">
+
+				<!-- Checkout Progress Bar -->
+				<header class="checkout-progress-bar mod-fixed">
+					<a href = "#step1" class="global-link checkout-progress-bar-step is-complete">
+						Step 1 of 4 In Progress
+					</a>
+					<a href = "#step2" class="global-link checkout-progress-bar-step">
+						Step 2 of 4
+					</a>
+					<a href = "#step3" class="global-link checkout-progress-bar-step">
+						Step 3 of 4
+					</a>			
+					<a href = "#step4" class="global-link checkout-progress-bar-step">
+						Step 4 of 4
+					</a>			
+					<a href = "#step5" class="global-link checkout-progress-bar-step">
+						Order Complete
+					</a>
+				</header>
+				<!-- end Checkout Progress Bar -->
+				<!-- start grid 75-->
+				<div class="grid-75">
+
+					<div class = "order-complete">
+
+					<div class="fa fa-check order-complete-icon"></div>
+					<h1 class = "util-text-center">Your order #12345 is complete.</h1>
+
+					<p class = "util-text-center">You will recieve a confirmation email shortly.</p>
+					<br><br>
+					<a class="global-link util-block-center util-text-center" href = "#"><i class="fa fa-caret-left"></i> Return To Peasy</a>
+		
+					</div>
+				</div>
+				<!--end grid 75-->
+			</main>
+			<!--end Order Complete View-->
+
+		</main>
+		<!-- end app main -->
+
+		<!-- sidebar app area-->
+		<div class="app-sidebar is-right cart-is-open">
+			
+			<!-- Product Filter Sidebar -->
+			<div class="product-filter">
+				<div class="product-filter-header">
+					<div class="product-filter-header-title">
+						Filter Items
+					</div>
+				 	<button class="global-button product-filter-close"><i class="fa fa-times"></i></button>
+				 </div>
+
+				 <ul class="global-list product-filter-list">
+					 	<li class="product-filter-list-header">
+					 		<span class="product-filter-list-content">Cuts</span>
+					 	</li>
+					 	<li class="product-filter-list-item">
+					 		<span class="product-filter-list-content">Diced</span>
+					 	</li>				 	
+					 	<li class="product-filter-list-item">
+					 		<span class="product-filter-list-content">Noodled</span>
+					 	</li>				 	
+					 	<li class="product-filter-list-item">
+					 		<span class="product-filter-list-content">Riced</span>
+					 	</li>
+				 </ul>
+
+				 <ul class="global-list product-filter-list">
+					 	<li class="product-filter-list-header">
+					 		<span class="product-filter-list-content">Vegetables</span>
+					 	</li>
+					 	<li class="product-filter-list-item">
+					 		<span class="product-filter-list-content">Spaghetti Squash</span>
+					 	</li>				 	
+					 	<li class="product-filter-list-item">
+					 		<span class="product-filter-list-content">Kale</span>
+					 	</li>				 	
+					 	<li class="product-filter-list-item">
+					 		<span class="product-filter-list-content">Cauliflower</span>
+					 	</li>				 	
+					 	<li class="product-filter-list-item">
+					 		<span class="product-filter-list-content">Turnip</span>
+					 	</li>				 	
+					 	<li class="product-filter-list-item">
+					 		<span class="product-filter-list-content">Sweet Potato</span>
+					 	</li>
+				 </ul>	 	
+			</div>
+			<!-- end Product Filter Sidebar -->
+
+			<!-- Cart Sidebar -->
+			<main class="cart is-visible">
+				<div class="cart-header">
+					<div class="cart-header-title">Your Cart</div>
+					<button class="global-button cart-close"><i class="fa fa-times"></i></button>
+				</div>
+
+				<ul class="global-list cart-list">
+					<li class="cart-list-date">Today, October 10</li>
+					<li class="cart-list-item">
+						<div class="cart-list-item-image"></div>
+						<div class="cart-list-item-right">
+							<div class="cart-list-item-title">Ribboned Kale</div>
+							<div class="cart-list-item-quantity">
+								<!-- toggle quantity -->
+								<div class="cart-list-item-quantity-toggle">
+									<button class="global-button cart-list-item-quantity-decrement">-</button>
+									<div class="cart-list-item-quantity-number">1</div>
+									<button class="global-button cart-list-item-quantity-increment">+</button>
+								</div>
+								<button class="global-button cart-list-item-quantity-remove">remove</button>
+							</div>
+							<div class="cart-list-item-price">$6.00</div>
+						</div>
+
+						<div class="util-clear"></div>
+					</li>
+				</ul>
+
+				<div class="cart-subtotal">
+					<div class="cart-subtotal-summary">
+						<div class="cart-subtotal-summary-title">Subtotal</div>
+						<div class="cart-subtotal-summary-price">$10.00</div>
+					</div>	
+					<button class="global-button mod-primary cart-subtotal-checkout">Proceed to Checkout</button>
+				</div>
+			</main>
+			<!-- end Cart Sidebar -->
+		</div>
+		<!-- end app sidebar area -->
+	</div> 
+	<!-- end app -->
+
+	<footer class = "footer">
+		<div class="grid-full">
+			<nav class="footer-nav">
+				<a href = "/" class="global-link footer-nav-link footer-logo"><i class="fa fa-leaf"></i></a>
+				<a href="#" class="global-link footer-nav-link">Terms & Conditions</a>
+				<a href="#" class="global-link footer-nav-link">Questions</a>
+				<a href="#" class="global-link footer-nav-link">Our Farms</a>
+				<a href="#" class="global-link footer-nav-link">About Us</a>
+				<a href="#" class="global-link footer-nav-link mod-no-padding">Join Us</a>
+			</nav>
+		</div>
+	</footer>
+
+
+	<script src="js/script.js"></script>
+</body>
+</html>
