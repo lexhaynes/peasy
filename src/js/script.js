@@ -191,7 +191,7 @@ var ViewCheckout = {
 		return
 	},
 	view: function(ctrl, args){
-		return 
+		return ()
 	}
 }
 
