@@ -50,10 +50,10 @@ html, body {
 	}
 
 
-	.app-main {
+	#app-main {
 		width:100%;
 	}	
-/*	.app-main.is-left {
+/*	#app-main.is-left {
 		width:75%;
 	}*/
 	.app-sidebar {
@@ -84,15 +84,19 @@ html, body {
 .grid-full.mod-flex {
 	display:flex;
 }
-
-.grid-full.mod-flex-column {
-	flex-direction: column;
-}
+	.grid-full.mod-flex.mod-flex-wrap {
+		flex-wrap:wrap;
+	}
 
 	.grid-full.mod-flex.mod-space-between {
 		justify-content:space-between;
 
 	}
+
+.grid-full.mod-flex-column {
+	flex-direction: column;
+}
+
 
 .grid-75 {
 	width:74%;
@@ -371,19 +375,28 @@ html, body {
 
 }
 
-.product-list-row {
-	margin:2.5rem 0;
-
-}
-
 .product-list-item {
 	flex-basis: 22%;
     max-width: 22%;
+    margin-bottom:2.5rem;
 }
+
+
+	/*assume we have 4 columns*/
+	.product-list-item:nth-child(4n) {
+    	flex-basis: 100%;
+	}
+
 	/* n in cart overlay */
 	.product-list-item.is-added {
 
 	}
+
+	.product-list-item.mod-filler {
+		visibility: hidden;
+	}
+
+	
 
 	.product-list-item-image {
 		min-height:200px;
