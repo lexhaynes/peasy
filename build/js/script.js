@@ -28,10 +28,24 @@ var AppMain = {
 	view: function(ctrl, args){
 		return {tag: "main", attrs: {className:"app-main"}, children: [
 					GlobalHeader, 
+					ErrorBar, 
 					m.component(ViewProducts, {cols:args.cols, products:args.products}), 
 					ViewCheckout
 				]}
 		
+	}
+}
+
+var ViewProducts = {
+	controller: function() {
+		return
+	},
+	view: function(ctrl, args){
+		return {tag: "main", attrs: {className:"view-products is-visible"}, children: [
+					m.component(IndexToolbar, {days:4}), 
+					m.component(DateSelect, {days:7}), 
+					m.component(ProductList, {cols:args.cols, products:args.products})
+				]}
 	}
 }
 
@@ -73,19 +87,6 @@ var ErrorBar = {
 					{tag: "button", attrs: {className:"global-button error-bar-close"}, children: ["[close]"]}
 				]}
 			]}
-	}
-}
-
-var ViewProducts = {
-	controller: function() {
-		return
-	},
-	view: function(ctrl, args){
-		return {tag: "main", attrs: {className:"view-products is-visible"}, children: [
-					m.component(IndexToolbar, {days:4}), 
-					m.component(DateSelect, {days:7}), 
-					m.component(ProductList, {cols:args.cols, products:args.products})
-				]}
 	}
 }
 
@@ -144,32 +145,29 @@ var ProductList = {
 			return {
 				renderProductList: function(cols, prods) {
 					var fillers = [];
-					console.log(prods.length % cols);
 					if (prods.length % cols != 0) {
 						//if we don't have enough blocks to fill a row, add invisible blocks for correct flexbox alignment
 						for (i = 0; i < prods.length % cols; i++) {
 							fillers.push(
-								{tag: "div", attrs: {class:"product-list-item mod-filler"}
-								
-							});
+								{tag: "div", attrs: {className:"product-list-item mod-filler"}});
 						}
 					}
 					var list = prods.map(function(item){
-						return 	{tag: "div", attrs: {class:"product-list-item"}, children: [
-									{tag: "div", attrs: {class:"product-list-item-image"}}, 
-									{tag: "div", attrs: {class:"product-list-item-title"}, children: [item.name]}, 
-									{tag: "div", attrs: {class:"product-list-item-options"}, children: [
-										{tag: "div", attrs: {class:"product-list-item-price"}, children: ["$", item.price]}, 
-										{tag: "div", attrs: {class:"product-list-item-options-buttons"}, children: [
-											{tag: "button", attrs: {class:"global-button product-list-item-button mod-remove"}, children: ["-"]}, 
-											{tag: "button", attrs: {class:"global-button product-list-item-button mod-add"}, children: ["+"]}
+						return 	{tag: "div", attrs: {className:"product-list-item"}, children: [
+									{tag: "div", attrs: {className:"product-list-item-image"}}, 
+									{tag: "div", attrs: {className:"product-list-item-title"}, children: [item.name]}, 
+									{tag: "div", attrs: {className:"product-list-item-options"}, children: [
+										{tag: "div", attrs: {className:"product-list-item-price"}, children: ["$", item.price]}, 
+										{tag: "div", attrs: {className:"product-list-item-options-buttons"}, children: [
+											{tag: "button", attrs: {className:"global-button product-list-item-button mod-remove"}, children: ["-"]}, 
+											{tag: "button", attrs: {className:"global-button product-list-item-button mod-add"}, children: ["+"]}
 										]}
 									]}
 							]}
 								
 					});
 
-					return [list, fillers];
+					return list.concat(fillers);
 							
 				}
 			}
@@ -177,8 +175,8 @@ var ProductList = {
 		},
 		view: function(ctrl, args) {
 			 
-	 		return {tag: "main", attrs: {class:"product-list"}, children: [
-							{tag: "div", attrs: {class:"grid-full mod-flex mod-flex-wrap mod-space-between"}, children: [
+	 		return {tag: "main", attrs: {className:"product-list"}, children: [
+							{tag: "div", attrs: {className:"grid-full mod-flex mod-flex-wrap mod-space-between"}, children: [
 	 						 ctrl.renderProductList(args.cols, args.products) 
 	 						]}
 	 			]}	
@@ -200,7 +198,7 @@ var AppSidebar = {
 		return
 	},
 	view: function(ctrl, args){
-		return 
+		return
 	}
 }
 

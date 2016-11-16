@@ -28,10 +28,24 @@ var AppMain = {
 	view: function(ctrl, args){
 		return <main className="app-main">
 					<GlobalHeader />
+					<ErrorBar />
 					<ViewProducts cols={args.cols} products={args.products} />
 					<ViewCheckout />
 				</main>
 		
+	}
+}
+
+var ViewProducts = {
+	controller: function() {
+		return
+	},
+	view: function(ctrl, args){
+		return <main className="view-products is-visible"> 
+					<IndexToolbar days={4} />
+					<DateSelect days={7} />
+					<ProductList cols={args.cols} products={args.products} />
+				</main>
 	}
 }
 
@@ -73,19 +87,6 @@ var ErrorBar = {
 					<button className="global-button error-bar-close">[close]</button>
 				</div>
 			</div>
-	}
-}
-
-var ViewProducts = {
-	controller: function() {
-		return
-	},
-	view: function(ctrl, args){
-		return <main className="view-products is-visible"> 
-					<IndexToolbar days={4} />
-					<DateSelect days={7} />
-					<ProductList cols={args.cols} products={args.products} />
-				</main>
 	}
 }
 
@@ -144,32 +145,29 @@ var ProductList = {
 			return {
 				renderProductList: function(cols, prods) {
 					var fillers = [];
-					console.log(prods.length % cols);
 					if (prods.length % cols != 0) {
 						//if we don't have enough blocks to fill a row, add invisible blocks for correct flexbox alignment
 						for (i = 0; i < prods.length % cols; i++) {
 							fillers.push(
-								<div class="product-list-item mod-filler">
-								
-							</div>);
+								<div className="product-list-item mod-filler"></div>);
 						}
 					}
 					var list = prods.map(function(item){
-						return 	<div class="product-list-item">
-									<div class="product-list-item-image"></div>
-									<div class="product-list-item-title">{item.name}</div>
-									<div class="product-list-item-options">
-										<div class="product-list-item-price">${item.price}</div>
-										<div class="product-list-item-options-buttons">
-											<button class="global-button product-list-item-button mod-remove">-</button>
-											<button class="global-button product-list-item-button mod-add">+</button>
+						return 	<div className="product-list-item">
+									<div className="product-list-item-image"></div>
+									<div className="product-list-item-title">{item.name}</div>
+									<div className="product-list-item-options">
+										<div className="product-list-item-price">${item.price}</div>
+										<div className="product-list-item-options-buttons">
+											<button className="global-button product-list-item-button mod-remove">-</button>
+											<button className="global-button product-list-item-button mod-add">+</button>
 										</div>
 									</div>
 							</div>
 								
 					});
 
-					return [list, fillers];
+					return list.concat(fillers);
 							
 				}
 			}
@@ -177,8 +175,8 @@ var ProductList = {
 		},
 		view: function(ctrl, args) {
 			 
-	 		return <main class="product-list">
-							<div class="grid-full mod-flex mod-flex-wrap mod-space-between">
+	 		return <main className="product-list">
+							<div className="grid-full mod-flex mod-flex-wrap mod-space-between">
 	 						{ ctrl.renderProductList(args.cols, args.products) }
 	 						</div>
 	 			</main>	
@@ -200,7 +198,7 @@ var AppSidebar = {
 		return
 	},
 	view: function(ctrl, args){
-		return 
+		return
 	}
 }
 
