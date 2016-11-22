@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "description": "Peasy App Prototype",
   "main": "index.js",
-  "start": "npm run build; npm run msx --watch src/ build/",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel src -d build",
-    "watch": "msx --watch src/ build/"
+    "babel-build": "babel src -d build",
+    "msx-watch": "msx --watch src/ build/",
+    "dev": "concurrently --kill-others \"msx --watch src/ build/\" \"babel src -d build\"",
+    "start": "npm run dev"
   },
   "keywords": [
     "mithril"
@@ -19,6 +20,8 @@
     "msx": "^0.4.1"
   },
   "devDependencies": {
-    "babel": "^6.5.2"
+    "babel-cli": "^6.18.0",
+    "babel-preset-latest": "^6.16.0",
+    "concurrently": "^3.1.0"
   }
 }
