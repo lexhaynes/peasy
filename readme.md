@@ -1,5 +1,4 @@
-Dependencies: Mithril, font-awesome
+Dependencies: Mithril, MSX
 
-Runs entirely in browser.
-
-No build process needed.
+#To Compile JSX to JS
+$ msx --watch src/ build/

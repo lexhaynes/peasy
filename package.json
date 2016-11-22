@@ -1,0 +1,21 @@
+{
+  "name": "peasy-proto",
+  "version": "1.0.0",
+  "description": "Peasy App Prototype",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mithril"
+  ],
+  "author": "Alexandra Haynes",
+  "license": "MIT",
+  "dependencies": {
+    "mithril": "^0.2.5",
+    "msx": "^0.4.1"
+  },
+  "devDependencies": {
+    "babel": "^6.5.2"
+  }
+}

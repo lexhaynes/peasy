@@ -1,2 +1,4 @@
 .DS_Store
 build/js/.module-cache/*
+build/.module-cache/*
+node_modules

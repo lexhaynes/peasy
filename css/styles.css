@@ -140,6 +140,7 @@ html, body {
 	background:#FD775B;
 	color:#fff;
 	border-radius:4px;
+	transition:background 0.25s;
 }
 
 .global-button.mod-primary:hover {
@@ -152,7 +153,6 @@ html, body {
 }
 
 .global-button-secondary {
-
 }
 
 .global-link {
@@ -427,6 +427,7 @@ html, body {
 			padding:0.15rem 0.5rem;
 			font-weight:400;
 			margin:0 0 0 0.5rem;
+			transition:background 0.25s, color 0.25s, border 0.25s;
 		}	
 		.product-list-item-button:hover {
 			background:#85dd60;
