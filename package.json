@@ -5,10 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "babel-build": "babel src -d build",
     "msx-watch": "msx --watch src/ build/",
-    "dev": "concurrently --kill-others \"msx --watch src/ build/\" \"babel src -d build\"",
-    "start": "npm run dev"
+    "start": "npm run msx-watch"
   },
   "keywords": [
     "mithril"
@@ -18,10 +16,5 @@
   "dependencies": {
     "mithril": "^0.2.5",
     "msx": "^0.4.1"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.18.0",
-    "babel-preset-latest": "^6.16.0",
-    "concurrently": "^3.1.0"
   }
 }
