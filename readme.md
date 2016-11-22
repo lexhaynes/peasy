@@ -1,4 +1,4 @@
-Dependencies: Mithril, MSX, Babel
+Dependencies: Mithril, MSX
 
-#To Compile JSX to JS, and ES6 to ES5
+#To Compile JSX to JS
 $ npm start
